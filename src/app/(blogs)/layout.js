@@ -14,10 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="light">
-      <body className={`${inter.className} bg-gray-50` }>
-        <Navbar/>
-        <div className="md:flex p-2">
+    <div className="md:flex p-2">
           <div className="hidden lg:block lg:w-2/12 h-screen sticky top-20 bg-base-300 shadow-md rounded-xl">
             <LeftSidebar/>
           </div>
@@ -26,8 +23,5 @@ export default function RootLayout({ children }) {
             <RightSidebar/>
           </div>
         </div>
-        <Footer/>
-      </body>
-    </html>
   );
 }
