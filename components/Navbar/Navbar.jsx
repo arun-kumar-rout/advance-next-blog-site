@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import ThemeController from "@@/ThemeController/ThemeController";
+import ProfileButton from "@@/ProfileButton/ProfileButton";
 
 const Navbar = () => {
   return (
@@ -72,7 +74,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <ThemeController/>
+          <ProfileButton/>
         </div>
       </div>
     </div>
