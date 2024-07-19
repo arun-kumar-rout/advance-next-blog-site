@@ -1,13 +1,17 @@
 import React from "react";
+import LegalMenuData from "@d/LegalMenuData";
+import WebsiteData from "@d/WebsiteData";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="footer footer-center bg-base-200 text-base-content rounded p-10 shadow-lg">
       <nav className="grid grid-flow-col gap-4">
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
+        {LegalMenuData.map((menu)=>{
+          return(
+            <Link className="link link-hover" href={menu.path} key={menu.menu}>{menu.menu}</Link>
+          )
+        })}
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
@@ -48,8 +52,7 @@ const Footer = () => {
       </nav>
       <aside>
         <p>
-          Copyright © ${new Date().getFullYear()} - All right reserved by ACME
-          Industries Ltd
+          Copyright © {new Date().getFullYear()} - All right reserved by {WebsiteData.siteName}
         </p>
       </aside>
     </footer>

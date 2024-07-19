@@ -28,7 +28,6 @@ const ThemeController = () => {
         className="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl"
       >
         {ThemeData.map((value, key) => {
-          console.log(value)
           return (
             <li key={key} onClick={() => handleClick()} >
               <input
